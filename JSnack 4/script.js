@@ -4,5 +4,15 @@
  chiedi all’utente il suo nome e comunicagli se può partecipare o no alla festa.
 */
 
-database = ['gianni'; 'pinotto'; 'angelo'; 'fabrizio'; 'nicolo'; 'margherita';]
+const database = ['gianni', 'pinotto', 'angelo', 'fabrizio', 'nicolo', 'margherita',]
 
+let corretto = false;
+const nome = prompt ("Come ti chiami?");
+
+corretto = database.includes(nome);
+
+if (corretto){
+  document.getElementById("stampa").innerHTML = "Sei in lista";
+} else {
+    document.getElementById("stampa").innerHTML = "Sei fuori";
+}
